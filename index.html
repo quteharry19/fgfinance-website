@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/favicon.png" />
+    <title>FG Finance Limited - Premium Insurance Funding</title>
+    <meta name="description"
+        content="FG Finance Limited provides premium funding solutions for New Zealand businesses. Pay insurance premiums in manageable monthly instalments." />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#009B77",
+                        secondary: "#1F4E3D",
+                        accent: "#8EC6A3",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#111827",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1F2937",
+                        "text-light": "#1F2937",
+                        "text-dark": "#F3F4F6",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                        serif: ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+    <!-- Navigation -->
+    <app-navbar active-page="home"></app-navbar>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 -z-20">
+        </div>
+        <div
+            class="absolute top-0 right-0 w-2/3 h-full bg-accent/10 dark:bg-primary/5 rounded-bl-[10rem] -z-10 transform translate-x-1/4">
+        </div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl -z-10">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="max-w-2xl animate-fade-in-up">
+                    <div
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-6">
+                        Premium Funding Solutions
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
+                        Unlock Business <span class="text-primary italic text-6xl lg:text-8xl">Cash Flow</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        Don't let large insurance premiums stall your business growth. FG Finance Limited provides
+                        flexible periodic payment plans that allow you to spread the cost of your insurance over time,
+                        preserving your working capital for what matters most.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-secondary shadow-xl shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1"
+                            href="contact.html">
+                            Get Started
+                            <span class="material-icons ml-2 text-sm">arrow_forward</span>
+                        </a>
+                        <a class="inline-flex items-center justify-center px-8 py-4 border border-gray-200 dark:border-gray-700 text-base font-medium rounded-full text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300"
+                            href="services.html">
+                            Learn More
+                        </a>
+                    </div>
+                    <div class="mt-10 flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-primary/30 border-2 border-white dark:border-gray-900">
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-primary/50 border-2 border-white dark:border-gray-900">
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-primary/70 border-2 border-white dark:border-gray-900">
+                            </div>
+                        </div>
+                        <p>Trusted by 200+ Businesses across NZ</p>
+                    </div>
+                </div>
+                <div class="mt-12 lg:mt-0 relative hidden lg:block">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl animate-float group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10">
+                        </div>
+                        <img alt="Business team discussing financial growth"
+                            class="w-full h-[600px] object-cover object-center transform transition-transform duration-700 group-hover:scale-105"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQrC_gjcaZJBhjsZNAc9KR6vHILja3VlIJg-ZEztygPEgQyL-0eHdkPb1b7eQQUSBKt2usjnchazxm0XANkH_2g6oJm8md8U9t0yNilvoAloZIW6lWPR_Zaxw_SsyujwibCPgXqG9HY3T6auFPemV4cE6wfUtAZuYDgxl2PGZk8jXz9sxnoZT7n1__3bHO_ycupG0z_WzSAcI2-H9EnTgnL41T-nHdWQ4CXB_yXqvQhXADu-b4bkSZW9-A2_2lRZpkUWAP9Q_0BSk" />
+                        <div
+                            class="absolute bottom-10 left-10 z-20 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 max-w-xs animate-[float_5s_ease-in-out_infinite_1s]">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-green-100 dark:bg-green-900 p-2 rounded-lg text-primary">
+                                    <span class="material-icons">trending_up</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">Cash Flow</p>
+                                    <p class="text-sm font-bold text-gray-900 dark:text-white">Optimized by 35%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-10 right-10 z-20 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 max-w-xs animate-[float_7s_ease-in-out_infinite]">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-lg text-blue-600">
+                                    <span class="material-icons">verified_user</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">Security</p>
+                                    <p class="text-sm font-bold text-gray-900 dark:text-white">Bank Grade</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary rounded-full blur-3xl opacity-20 -z-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurer Partners -->
+    <section class="py-10 border-y border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-medium text-gray-400 uppercase tracking-widest mb-8">Partnering with
+                leading insurers</p>
+            <div
+                class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <span class="text-xl font-bold text-gray-800 dark:text-gray-200">IAG</span>
+                <span class="text-xl font-bold text-gray-800 dark:text-gray-200">Vero</span>
+                <span class="text-xl font-bold text-gray-800 dark:text-gray-200">Chubb</span>
+                <span class="text-xl font-bold text-gray-800 dark:text-gray-200">QBE</span>
+                <span class="text-xl font-bold text-gray-800 dark:text-gray-200">Zurich</span>
+                <span class="text-xl font-bold text-gray-800 dark:text-gray-200">AIG</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Premium Funding Works -->
+    <section class="py-24 bg-gray-50 dark:bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">How Premium Funding Works
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300">We offer a clever solution that takes the stress out of
+                    insurance payments by allowing you to pay for multiple policies through easy instalments.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 relative group border border-gray-100 dark:border-gray-700">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-icons text-3xl">request_quote</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">1. Select Monthly Payment</h3>
+                    <p class="text-gray-600 dark:text-gray-400">When your insurance broker from FG Insurance Services or
+                        another provider issues your renewal, simply choose the "Pay Monthly" option.</p>
+                    <div
+                        class="absolute top-8 right-8 text-6xl font-serif text-gray-100 dark:text-gray-700 font-bold -z-10 group-hover:text-primary/10 transition-colors">
+                        01</div>
+                </div>
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 relative group border border-gray-100 dark:border-gray-700">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-icons text-3xl">check_circle_outline</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">2. We Fund the Premium</h3>
+                    <p class="text-gray-600 dark:text-gray-400">FG Finance Limited pays your total insurance premium
+                        upfront and in full directly to the insurer, ensuring your cover is immediate and secure.</p>
+                    <div
+                        class="absolute top-8 right-8 text-6xl font-serif text-gray-100 dark:text-gray-700 font-bold -z-10 group-hover:text-primary/10 transition-colors">
+                        02</div>
+                </div>
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 relative group border border-gray-100 dark:border-gray-700">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <span class="material-icons text-3xl">calendar_today</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">3. Simple Repayments</h3>
+                    <p class="text-gray-600 dark:text-gray-400">You repay the amount over a set period (typically 6-12
+                        months) via a fixed monthly direct debit, making budgeting predictable and easy.</p>
+                    <div
+                        class="absolute top-8 right-8 text-6xl font-serif text-gray-100 dark:text-gray-700 font-bold -z-10 group-hover:text-primary/10 transition-colors">
+                        03</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose FG Finance -->
+    <section class="py-24 bg-white dark:bg-background-dark overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5 relative mb-16 lg:mb-0">
+                    <div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl">
+                        <img alt="Consultation" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQvcYl_-fZRotK3PnuH1pEZk_ZdPa6rPsjboMGb9pdvBbQ4kHinMJFQ1T2dE1AOZ7sj9KA_Wp1dBu_U8wxdSd_FyczKNgjeTYG8JFa6V3rVwFHxpsa1BCRngGOkrc0IyyQA63xZuIoFhdtnZiMHATs2K-V-emMEuyALfNYv5eJDSHhk4z3LhYOFuix5HKdFsOVwBNsk50FYCH369fOB02aOtaOTsv2PuiWJ-ZZwJEXonguRviw8ZsLzRMvbsKnYvF5r0RkylmPYV4" />
+                        <div class="absolute inset-0 bg-secondary/20 mix-blend-multiply"></div>
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -right-10 bg-primary p-8 rounded-2xl shadow-xl max-w-xs hidden md:block">
+                        <p class="text-white text-lg font-serif italic mb-2">"The FG Finance team are always willing to
+                            discuss options for my clients."</p>
+                        <p class="text-white/80 text-sm font-semibold mt-4">- Sarah, Insurance Broker</p>
+                    </div>
+                    <div class="absolute top-10 -left-10 w-24 h-24 bg-yellow-400 rounded-full blur-3xl opacity-30">
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Why Choose FG
+                        Finance</span>
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8">Financial flexibility
+                        to grow your business</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-primary">
+                                    <span class="material-icons text-xl">account_balance_wallet</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Improve Cash Flow</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Retain working capital for income-generating
+                                    opportunities rather than paying a lump sum upfront.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-primary">
+                                    <span class="material-icons text-xl">lock</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Fixed Interest Rates
+                                </h4>
+                                <p class="text-gray-600 dark:text-gray-400">Interest rates are fixed for the term of the
+                                    loan, protecting you from market fluctuations.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-primary">
+                                    <span class="material-icons text-xl">savings</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Tax Deductible</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Interest costs are generally tax-deductible
+                                    for businesses (consult your accountant).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Insurance Funding -->
+    <section class="py-24 bg-secondary text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="h-full w-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white"></path>
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 font-serif">Comprehensive Insurance Funding</h2>
+            <p class="text-lg text-gray-200 max-w-2xl mx-auto mb-12">
+                We fund a wide range of commercial insurance premiums, from small business packages to large corporate
+                programs.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div
+                    class="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition duration-300">
+                    <span class="material-icons text-3xl mb-3 text-accent">business</span>
+                    <h3 class="font-bold text-lg">Commercial Property</h3>
+                </div>
+                <div
+                    class="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition duration-300">
+                    <span class="material-icons text-3xl mb-3 text-accent">local_shipping</span>
+                    <h3 class="font-bold text-lg">Commercial Motor</h3>
+                </div>
+                <div
+                    class="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition duration-300">
+                    <span class="material-icons text-3xl mb-3 text-accent">gavel</span>
+                    <h3 class="font-bold text-lg">Professional Indemnity</h3>
+                </div>
+                <div
+                    class="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition duration-300">
+                    <span class="material-icons text-3xl mb-3 text-accent">engineering</span>
+                    <h3 class="font-bold text-lg">Public Liability</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-background-light dark:bg-background-dark">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="bg-white dark:bg-gray-800 rounded-3xl p-8 md:p-16 shadow-2xl relative overflow-hidden text-center border border-gray-100 dark:border-gray-700">
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl">
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Ready to optimize your
+                    cash flow?</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
+                    Speak to our friendly team today or ask your insurance broker about FG Finance premium funding
+                    options.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-secondary hover:bg-primary shadow-lg transition-all duration-300"
+                        href="contact.html">
+                        Request a Quote
+                    </a>
+                    <a class="inline-flex items-center justify-center px-8 py-4 border border-gray-200 dark:border-gray-600 text-base font-medium rounded-full text-gray-700 dark:text-gray-200 bg-transparent hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300"
+                        href="contact.html">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Part of the FG Group -->
+    <section class="bg-gray-50 dark:bg-gray-900/50 py-16 border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p
+                class="text-center text-sm font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-10">
+                Part of the FG Group</p>
+            <div
+                class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <a href="https://fgis.co.nz" target="_blank" rel="noopener noreferrer"
+                    class="transition-transform hover:scale-105">
+                    <img src="/assets/fgis_logo.png" alt="FGIS Insurance Services"
+                        class="h-10 md:h-12 w-auto dark:brightness-0 dark:invert" />
+                </a>
+                <a href="https://fglife.co.nz" target="_blank" rel="noopener noreferrer"
+                    class="transition-transform hover:scale-105">
+                    <img src="/assets/fglife.png" alt="FG Life & Health"
+                        class="h-10 md:h-12 w-auto dark:brightness-0 dark:invert" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <app-footer></app-footer>
+    <script type="module" src="./components/footer.js"></script>
+
+    <script type="module" src="./components/navbar.js"></script>
+    <script>
+        // Dark mode initial state
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</body>
+
+</html>

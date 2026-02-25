@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FG Finance - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#00a98f", // Teal/Green derived from logo
+                        secondary: "#1a2e35", // Dark blue/green
+                        "background-light": "#f8f9fa",
+                        "background-dark": "#111827",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1f2937",
+                        "text-light": "#374151",
+                        "text-dark": "#d1d5db",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'], // Assuming a serif font for headings based on "fg" logo vibe
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': "1rem",
+                        '2xl': "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300">
+    <nav
+        class="sticky top-0 z-50 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="text-3xl font-display font-bold text-primary tracking-tighter">
+                        fg<span
+                            class="text-secondary dark:text-white font-sans text-sm tracking-widest font-normal ml-2 uppercase border-l border-gray-400 pl-2">Finance</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#">Home</a>
+                    <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#">Premium Funding</a>
+                    <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#">Broker Support</a>
+                    <a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#">About Us</a>
+                    <a class="bg-primary text-white px-5 py-2 rounded-full hover:bg-opacity-90 transition-all shadow-md"
+                        href="#">Portal Login</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 dark:text-gray-300 hover:text-primary focus:outline-none">
+                        <span class="material-icons text-3xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="relative bg-secondary dark:bg-black py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-20 dark:opacity-40">
+            <img alt="Modern office building pattern" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc69idfHwNcX74blNzf5DkAIMdIoZhSJoraGUYsnXBi2tTz6VE9-yMzSCwFMjtlQ7xdtmFHQC-QpjWdLBmbTyVCU-Kk9bRTtJ-TtzVKBxStMYjkjc6Jhv8sM2B7P6l3HLDUwzGW7J375J53iKDSJZiFVGY-3N1zo9EdGy-rivDrnfW4z79aQxEHkpw6Ci2yuhjPol7YD3j4GYRiZKDJ9rOX8unuMiikFtNai7gtraDs2iIjo2jZiYOXqHgmsvrcCXSwwSejotXHiM" />
+        </div>
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-secondary/90 to-primary/80 dark:from-black/90 dark:to-primary/60">
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <h1 class="text-4xl md:text-5xl font-display font-bold text-white mb-4">Get in touch</h1>
+            <p class="text-xl text-gray-200 max-w-2xl font-light">
+                Secure your premium funding solutions today. Our team is ready to assist you with tailored financial
+                services.
+            </p>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <div
+                class="bg-surface-light dark:bg-surface-dark p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+                <h2 class="text-3xl font-display font-semibold text-gray-900 dark:text-white mb-2">Send us a message
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8">Fill out the form below and we'll get back to you
+                    within 24 hours.</p>
+                <form action="#" class="space-y-6" method="POST">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                for="first-name">First Name</label>
+                            <input
+                                class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm focus:border-primary focus:ring-primary transition-colors"
+                                id="first-name" placeholder="Jane" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                for="last-name">Last Name</label>
+                            <input
+                                class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm focus:border-primary focus:ring-primary transition-colors"
+                                id="last-name" placeholder="Doe" type="text" />
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="email">Email
+                            Address</label>
+                        <input
+                            class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm focus:border-primary focus:ring-primary transition-colors"
+                            id="email" placeholder="jane@company.com" type="email" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                            for="subject">Topic</label>
+                        <select
+                            class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm focus:border-primary focus:ring-primary transition-colors"
+                            id="subject">
+                            <option>General Inquiry</option>
+                            <option>Premium Funding Application</option>
+                            <option>Broker Support</option>
+                            <option>Existing Loan Query</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                            for="message">Message</label>
+                        <textarea
+                            class="w-full rounded-lg border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white shadow-sm focus:border-primary focus:ring-primary transition-colors"
+                            id="message" placeholder="How can we help you?" rows="4"></textarea>
+                    </div>
+                    <div class="pt-2">
+                        <button
+                            class="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all shadow-md transform hover:-translate-y-0.5"
+                            type="submit">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="flex flex-col space-y-10">
+                <div class="grid grid-cols-1 gap-6">
+                    <div
+                        class="flex items-start space-x-4 p-6 bg-white dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/30 transition-colors">
+                        <div class="flex-shrink-0 bg-primary/10 dark:bg-primary/20 p-3 rounded-full text-primary">
+                            <span class="material-icons">location_on</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white font-display">Head Office
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-400 mt-1">Level 4, 152 Quay Street<br />Auckland CBD,
+                                1010<br />New Zealand</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-start space-x-4 p-6 bg-white dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/30 transition-colors">
+                        <div class="flex-shrink-0 bg-primary/10 dark:bg-primary/20 p-3 rounded-full text-primary">
+                            <span class="material-icons">phone_in_talk</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white font-display">Phone</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mt-1 text-sm mb-2">Mon-Fri from 8:30am to 5pm.
+                            </p>
+                            <a class="text-primary font-semibold hover:underline text-lg" href="tel:+6490000000">0800 FG
+                                FINANCE</a>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-start space-x-4 p-6 bg-white dark:bg-surface-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:border-primary/30 transition-colors">
+                        <div class="flex-shrink-0 bg-primary/10 dark:bg-primary/20 p-3 rounded-full text-primary">
+                            <span class="material-icons">email</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white font-display">Email</h3>
+                            <p class="text-gray-600 dark:text-gray-400 mt-1 mb-2 text-sm">Our team will respond
+                                promptly.</p>
+                            <a class="text-primary font-semibold hover:underline"
+                                href="mailto:info@fgfinance.co.nz">info@fgfinance.co.nz</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-secondary dark:bg-gray-800 rounded-xl p-8 text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold font-display mb-2">Are you an Insurance Broker?</h3>
+                        <p class="text-gray-300 mb-6 text-sm">We offer dedicated support lines and specialized portals
+                            for our broker partners.</p>
+                        <a class="inline-flex items-center text-primary font-semibold hover:text-white transition-colors"
+                            href="#">
+                            Contact Broker Support <span class="material-icons text-sm ml-1">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="absolute right-0 bottom-0 opacity-10 transform translate-x-1/4 translate-y-1/4">
+                        <span class="material-icons text-9xl">handshake</span>
+                    </div>
+                </div>
+                <div
+                    class="w-full h-64 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 relative group">
+                    <iframe allowfullscreen="" height="100%" loading="lazy"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.836696781709!2d174.763332!3d-36.8484597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47e62c12949f%3A0xe21262d2d6106680!2sAuckland%20CBD%2C%20Auckland%2C%20New%20Zealand!5e0!3m2!1sen!2sus!4v1625680000000!5m2!1sen!2sus"
+                        style="border:0; filter: grayscale(1) contrast(1.2) opacity(0.8);" width="100%">
+                    </iframe>
+                    <div
+                        class="absolute inset-0 pointer-events-none border-4 border-white/20 dark:border-black/20 rounded-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="bg-gray-100 dark:bg-gray-900 py-12 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-8">
+                Part of the FG Group</p>
+            <div
+                class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="text-2xl font-display font-bold text-gray-800 dark:text-gray-200 flex items-center gap-2">
+                    <span class="text-primary text-3xl">fg</span>IS <span
+                        class="text-xs font-sans font-normal border-l border-gray-400 pl-2 text-gray-500">Insurance
+                        Solutions</span>
+                </div>
+                <div class="text-2xl font-display font-bold text-gray-800 dark:text-gray-200 flex items-center gap-2">
+                    <span class="text-primary text-3xl">fg</span>Life <span
+                        class="text-xs font-sans font-normal border-l border-gray-400 pl-2 text-gray-500">Life &amp;
+                        Health</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-secondary dark:bg-black text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="text-3xl font-display font-bold text-white tracking-tighter mb-4">
+                        fg<span
+                            class="text-primary font-sans text-sm tracking-widest font-normal ml-2 uppercase">Finance</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Providing innovative premium funding solutions to New Zealand businesses, empowering growth
+                        through financial flexibility.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a class="text-gray-400 hover:text-white transition-colors" href="#"><span
+                                class="material-icons">facebook</span></a>
+                        <a class="text-gray-400 hover:text-white transition-colors" href="#"><img alt="LinkedIn"
+                                class="w-6 h-6 filter invert opacity-60 hover:opacity-100"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDBuw4KLs32mbZl-P4hZlA2PHq5AQOOxRpeMXWE3DeFJevaAQuU9lvbj8vq5cDxraJtUPTV-BCDNJKweXg5ZqAe0AcGPRp6RhYcschgedi0roKSDPAjDNyXRd7ngsRveGVpsv3UcQRvijVM54f6-rnwxhhy_9Q6pZSkA5V3LIBvfrnqwbL5cQE674PSkNXHBmxEGisvPq3cQtXE32e5WAMR7F93ssDEDofB8lvSfLkSszqllwPGgAPANMDhWe4p4rr9raSf7LGCmg" /></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-primary">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">Home</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Our Services</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Premium Funding</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">News &amp; Insights</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-primary">Support</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">Broker Portal</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Client Login</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">FAQ</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-primary">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Disclosure Statement</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Complaints Process</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>© 2024 FG Finance Limited. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <span>New Zealand Owned &amp; Operated</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
