@@ -22,20 +22,27 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#009B77",
-                        secondary: "#1F2937",
-                        "background-light": "#F9FAFB",
-                        "background-dark": "#111827",
+                        primary: "#0A3C2D",
+                        secondary: "#9E7A44",
+                        accent: "#10B981",
+                        "background-light": "#F4F7F5",
+                        "background-dark": "#05120E",
                         "surface-light": "#FFFFFF",
-                        "surface-dark": "#1F2937",
-                        "accent-light": "#E0F2F1",
-                        "accent-dark": "#064E3B",
+                        "surface-dark": "#081C15",
+                        "accent-light": "#E6EDE9",
+                        "accent-dark": "#0A3C2D",
+                        "text-light": "#0E2F25",
+                        "text-dark": "#ECFDF5",
                     },
                     fontFamily: {
                         sans: ["Inter", "sans-serif"],
                         display: ["Playfair Display", "serif"],
                     },
-                    borderRadius: { DEFAULT: "0.5rem" },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
                 },
             },
         };
@@ -67,7 +74,7 @@
         }
 
         .timeline-container::-webkit-scrollbar-thumb {
-            background-color: #009B77;
+            background-color: #0A3C2D;
             border-radius: 20px;
         }
     </style>

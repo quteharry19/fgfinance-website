@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="/assets/favicon.png" />
     <title>Privacy Policy - FG Finance Limited</title>
     <meta name="description"
-        content="Read the Privacy Policy of FG Finance Limited. We are committed to protecting your personal information and complying with the Privacy Act 2020." />
+        content="Read the Privacy Policy of FG Finance Limited. We are committed to protecting your personal information in compliance with the New Zealand Privacy Act 2020 and IPP 3A." />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <script>
         tailwind.config = {
@@ -16,20 +16,25 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#009B77",
-                        secondary: "#1F4E3D",
-                        accent: "#8EC6A3",
-                        "background-light": "#F9FAFB",
-                        "background-dark": "#111827",
+                        primary: "#0A3C2D",
+                        secondary: "#9E7A44",
+                        accent: "#10B981",
+                        "background-light": "#F4F7F5",
+                        "background-dark": "#05120E",
                         "surface-light": "#FFFFFF",
-                        "surface-dark": "#1F2937",
-                        "text-light": "#1F2937",
-                        "text-dark": "#F3F4F6",
+                        "surface-dark": "#081C15",
+                        "text-light": "#0E2F25",
+                        "text-dark": "#ECFDF5",
                     },
                     fontFamily: {
                         display: ["Inter", "sans-serif"],
                         body: ["Inter", "sans-serif"],
                         serif: ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
                     }
                 },
             },
@@ -53,105 +58,170 @@
             font-family: 'Playfair Display', serif;
         }
 
-        .prose h2 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .prose p {
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .prose ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .prose li {
-            margin-bottom: 0.5rem;
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
-    <app-navbar active-page="privacy"></app-navbar>
+    <app-navbar active-page="resources"></app-navbar>
 
-    <main class="pt-32 pb-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
-                <p class="text-gray-500 dark:text-gray-400">Last updated: February 2026</p>
+    <main class="pt-32 pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumbs -->
+            <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-8">
+                <a href="resources.html" class="hover:text-primary dark:hover:text-secondary transition-colors">Resources</a>
+                <span class="material-icons text-xs">chevron_right</span>
+                <span class="text-gray-900 dark:text-white font-medium">Privacy Policy</span>
             </div>
 
-            <div
-                class="bg-white dark:bg-surface-dark rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 prose prose-slate dark:prose-invert max-w-none">
-                <p>At FG Finance Limited, we are committed to protecting your privacy. This Privacy Policy explains how
-                    we collect, use, disclose, and safeguard your personal information in accordance with the New
-                    Zealand Privacy Act 2020.</p>
+            <!-- Page Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+                <!-- Sidebar Quick Navigation -->
+                <div class="hidden lg:block lg:col-span-1">
+                    <div class="sticky top-28 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800/80 rounded-3xl p-6 shadow-sm">
+                        <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Privacy Chapters</h4>
+                        <nav class="flex flex-col gap-3 text-sm">
+                            <a href="#compliance" class="text-primary dark:text-secondary font-semibold hover:text-secondary transition-colors">NZ Act 2020 Compliance</a>
+                            <a href="#ipp3a" class="text-red-700 dark:text-amber-500 font-semibold hover:underline">IPP 3A Disclosures</a>
+                            <a href="#collection" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">Information Collected</a>
+                            <a href="#usage" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">How We Use Info</a>
+                            <a href="#disclosure" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">Disclosure Limits</a>
+                            <a href="#rights" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">Access & Correction</a>
+                            <a href="#contacts" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">Privacy Officer</a>
+                        </nav>
+                        <hr class="my-6 border-gray-100 dark:border-gray-800" />
+                        <a href="complaints.html" class="inline-flex items-center justify-center w-full px-4 py-2 text-xs font-semibold rounded-full text-white bg-primary hover:bg-secondary transition-all">
+                            Resolving Complaints
+                        </a>
+                    </div>
+                </div>
 
-                <h2>1. Information We Collect</h2>
-                <p>We may collect personal information about you when you use our services, including:</p>
-                <ul>
-                    <li>Contact information (e.g., name, address, email, phone number).</li>
-                    <li>Financial information (e.g., bank account details for direct debits).</li>
-                    <li>Information related to your insurance policies and premiums.</li>
-                    <li>Verification information (e.g., identification for AML/CFT compliance).</li>
-                </ul>
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800/80 rounded-3xl p-8 md:p-12 shadow-sm">
+                        <div class="border-b border-gray-100 dark:border-gray-800/80 pb-8 mb-8">
+                            <span class="inline-block px-3 py-1 rounded-full bg-primary/10 dark:bg-secondary/15 text-primary dark:text-secondary text-xs font-bold uppercase tracking-wider mb-4">NZ Legal Compliance</span>
+                            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Privacy Policy</h1>
+                            <p class="text-sm text-gray-500">Last updated: May 2026 | Version: PRIV-NZ-2026-V2</p>
+                        </div>
 
-                <h2>2. How We Use Your Information</h2>
-                <p>We use your personal information for purposes including:</p>
-                <ul>
-                    <li>Providing and managing your premium funding facility.</li>
-                    <li>Processing your payments and managing your account.</li>
-                    <li>Communicating with you about your account and our services.</li>
-                    <li>Complying with legal and regulatory requirements (e.g., AML/CFT).</li>
-                    <li>Improving our services and developing new products.</li>
-                </ul>
+                        <!-- Policy Text Content (adapted to NZ) -->
+                        <div class="prose prose-slate dark:prose-invert max-w-none space-y-8">
+                            
+                            <!-- introduction -->
+                            <section id="compliance" class="scroll-mt-28">
+                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+                                    At **FG Finance Limited** ("we", "us", "our"), we are committed to safeguarding your personal and credit-related information with the highest level of security. This Privacy Policy explains how we collect, store, use, and disclose your personal details in accordance with the New Zealand **Privacy Act 2020** and the **Credit Reporting Privacy Code 2020**.
+                                </p>
+                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm mt-3">
+                                    If you have any questions relating to this policy, or would like a printed hard copy, please contact our designated Privacy Officer whose details are provided at the end of this document.
+                                </p>
+                            </section>
 
-                <h2>3. Disclosure of Information</h2>
-                <p>We may disclose your personal information to:</p>
-                <ul>
-                    <li>Your insurance broker (Intermediary).</li>
-                    <li>Insurance companies (Insurers).</li>
-                    <li>Credit reporting agencies and financial institutions.</li>
-                    <li>Service providers who assist us in our business operations.</li>
-                    <li>Government and regulatory authorities as required by law.</li>
-                </ul>
+                            <!-- NEW: IPP 3A Disclosures -->
+                            <section id="ipp3a" class="bg-primary/5 dark:bg-secondary/5 rounded-3xl p-6 border-l-4 border-secondary scroll-mt-28">
+                                <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+                                    <span class="material-icons text-amber-600 dark:text-amber-500">notification_important</span>
+                                    Information Privacy Principle 3A (IPP 3A) Compliance
+                                </h3>
+                                <p class="text-xs md:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Under the *Privacy Amendment Act 2025*, **Information Privacy Principle 3A (IPP 3A)** governs the collection of personal information from a source other than the individual concerned (indirect collection). This framework is effective starting **1 May 2026**.
+                                </p>
+                                <p class="text-xs md:text-sm text-gray-600 dark:text-gray-300 leading-relaxed mt-2">
+                                    Because FG Finance operates primarily as an insurance premium funder, we collect clients' personal information **indirectly via authorized insurance brokers** (intermediaries) using their secure broker portals (`crm.fgfinance.co.nz`).
+                                </p>
+                                <p class="text-xs md:text-sm text-gray-600 dark:text-gray-300 leading-relaxed mt-2 font-semibold">
+                                    In compliance with IPP 3A, when an insurance broker transmits your personal or commercial credit information to us, we take reasonable steps to ensure that you are notified of, or are otherwise aware of:
+                                </p>
+                                <ul class="list-disc pl-6 space-y-1 text-xs text-gray-600 dark:text-gray-300 mt-2">
+                                    <li>The fact that we have collected your personal information from your insurance broker.</li>
+                                    <li>The specific purpose of the collection (i.e. to assess, verify, and administer your premium funding loan facility).</li>
+                                    <li>The intended recipients or categories of recipients of the information (e.g. credit bureaus, underwriting insurers, or clearing banks).</li>
+                                    <li>Your rights of access to, and request for correction of, your personal details.</li>
+                                    <li>Whether the supply of information is voluntary or mandatory under New Zealand law, and the consequences of not providing the details (e.g. our inability to establish your credit facility).</li>
+                                </ul>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-3">
+                                    **Broker Obligations:** We require our partner insurance brokers, when submitting applications on behalf of their clients, to guarantee that the client has been provided with our Privacy Collection Statement and is aware of this Privacy Policy.
+                                </p>
+                            </section>
 
-                <h2>4. Data Security</h2>
-                <p>We take reasonable steps to protect your personal information from unauthorised access, use, or
-                    disclosure. We use physical, technical, and administrative security measures to safeguard your data.
-                </p>
+                            <!-- section 1: Info we collect -->
+                            <section id="collection" class="scroll-mt-28">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">1. Types of Information We Collect</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                    We collect personal and credit-related details only if it is necessary for our operations. Depending on the product or service we provide, the information we collect may include:
+                                </p>
+                                <ul class="list-disc pl-6 space-y-2 text-sm text-gray-600 dark:text-gray-300 mt-2">
+                                    <li>**Identity & Contact Details:** Name, email address, physical address, phone numbers, birthdate, employment details, and driver’s license or other government identifiers (to comply with New Zealand AML/CFT legislation).</li>
+                                    <li>**Financial Information:** Bank account details for direct debits, credit card details, credit histories, income details, and statements of assets/liabilities (if required for credit assessments).</li>
+                                    <li>**Policy Information:** Details regarding the insurance products you have taken out with your insurance broker, including insurer names, policy durations, premium amounts, and policy numbers.</li>
+                                    <li>**Credit Reports:** Credit reporting data sourced from registered credit bureaus in New Zealand, which may include payment history records and credit evaluations.</li>
+                                </ul>
+                            </section>
 
-                <h2>5. Your Rights</h2>
-                <p>Under the Privacy Act 2020, you have the right to:</p>
-                <ul>
-                    <li>Access the personal information we hold about you.</li>
-                    <li>Request the correction of any incorrect information.</li>
-                    <li>Make a complaint if you believe we have breached your privacy.</li>
-                </ul>
+                            <!-- section 2: How we use information -->
+                            <section id="usage" class="scroll-mt-28">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">2. How We Use Your Information</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                    We use the collected information strictly for authorized, business-related purposes, including:
+                                </p>
+                                <ul class="list-disc pl-6 space-y-2 text-sm text-gray-600 dark:text-gray-300 mt-2">
+                                    <li>To process, evaluate, and verify credit applications.</li>
+                                    <li>To establish, administer, and manage your premium funding facility (including processing repayments and automated direct debits).</li>
+                                    <li>To monitor credit worthiness and enforce debt collection processes where necessary.</li>
+                                    <li>To comply with our regulatory obligations under New Zealand law (such as the Anti-Money Laundering and Countering Financing of Terrorism Act 2009).</li>
+                                    <li>To facilitate administrative operations, including system testing and consumer surveys.</li>
+                                </ul>
+                            </section>
 
-                <h2>6. Cookies</h2>
-                <p>Our website may use cookies to enhance your browsing experience and collect anonymous usage data. You
-                    can disable cookies in your browser settings, but this may affect the functionality of our site.</p>
+                            <!-- section 3: Disclosures -->
+                            <section id="disclosure" class="scroll-mt-28">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">3. Disclosure of Your Information</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                    We may disclose your personal details to external organizations, strictly under secure conditions and for relevant purposes, including to:
+                                </p>
+                                <ul class="list-disc pl-6 space-y-2 text-sm text-gray-600 dark:text-gray-300 mt-2">
+                                    <li>Your nominated **insurance broker** (intermediary) and the underlying **insurance companies** underwriting your policy.</li>
+                                    <li>Registered New Zealand **credit reporting bodies** (such as Equifax, illion, or Centrix) to perform credit checks or report defaults.</li>
+                                    <li>Secured mailing houses, IT service providers, administrative contractors, debt recovery agencies, and lawyers.</li>
+                                    <li>Government, regulatory, or law enforcement bodies in New Zealand where required or permitted by law.</li>
+                                </ul>
+                            </section>
 
-                <h2>7. Changes to This Policy</h2>
-                <p>We may update this Privacy Policy from time to time by posting a new version on our website. We
-                    encourage you to review this policy periodically.</p>
+                            <!-- section 4: Rights -->
+                            <section id="rights" class="scroll-mt-28">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">4. Accessing and Correcting Your Information</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                                    Under the New Zealand **Privacy Act 2020**, you have the absolute right to request access to the personal and credit-related information we hold about you. You also have the right to request that we correct any incorrect or outdated details.
+                                </p>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mt-2">
+                                    To ensure confidentiality, we will verify your identity thoroughly before releasing any data. While accessing your information is completely free of charge, we may recover reasonable administrative expenses incurred (such as photocopying or search time) if your request requires substantial administrative effort.
+                                </p>
+                            </section>
 
-                <h2>8. Contact Us</h2>
-                <p>If you have any questions or concerns about our Privacy Policy or the personal information we hold
-                    about you, please contact us at:</p>
-                <p>
-                    <strong>Email:</strong> admin@fgfinance.co.nz<br>
-                    <strong>Phone:</strong> 0800 344 700<br>
-                    <strong>Address:</strong> 430 Ulster Street, Beerescourt, Hamilton 3200, New Zealand
-                </p>
+                            <!-- section 5: Contacts -->
+                            <section id="contacts" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/80 pt-8">
+                                <h4 class="text-base font-bold text-gray-900 dark:text-white mb-3">Contact Our Privacy Officer</h4>
+                                <p class="text-xs text-gray-500 leading-relaxed mb-4">
+                                    For any questions regarding this policy, to request correction of your personal data, or to make a formal privacy complaint, please contact our Privacy Officer in Hamilton:
+                                </p>
+                                <div class="bg-background-light dark:bg-background-dark/30 rounded-2xl p-5 border border-gray-100 dark:border-gray-800 text-xs leading-relaxed space-y-1">
+                                    <span class="block font-bold text-gray-900 dark:text-white text-sm">Privacy Officer — FG Finance Limited</span>
+                                    <p class="text-gray-500">430 Ulster Street, Beerescourt, Hamilton 3200, Waikato, New Zealand</p>
+                                    <p>Email: <a href="mailto:admin@fgfinance.co.nz" class="text-secondary underline">admin@fgfinance.co.nz</a></p>
+                                    <p>Phone: <a href="tel:0800344700" class="text-secondary underline">0800 344 700</a></p>
+                                </div>
+                                <p class="text-xs text-gray-500 leading-relaxed mt-4">
+                                    If you are unhappy with how our Privacy Officer has resolved your complaint, you may escalate your privacy concerns to the **Office of the Privacy Commissioner (OPC)** in Wellington at <a href="https://www.privacy.org.nz" target="_blank" rel="noopener noreferrer" class="text-secondary underline hover:text-primary transition-colors">www.privacy.org.nz</a> or phone **0800 803 909**.
+                                </p>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

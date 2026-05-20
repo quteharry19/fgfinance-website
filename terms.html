@@ -6,9 +6,9 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="apple-touch-icon" href="/assets/favicon.png" />
-    <title>Terms and Conditions - FG Finance Limited</title>
+    <title>Terms & Conditions - FG Finance Limited</title>
     <meta name="description"
-        content="Read the General Terms and Conditions for FG Finance Limited premium funding agreements." />
+        content="Read the General Terms and Conditions for FG Finance Limited premium funding agreements. Operating under New Zealand commercial regulations." />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <script>
         tailwind.config = {
@@ -16,20 +16,25 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#009B77",
-                        secondary: "#1F4E3D",
-                        accent: "#8EC6A3",
-                        "background-light": "#F9FAFB",
-                        "background-dark": "#111827",
+                        primary: "#0A3C2D",
+                        secondary: "#9E7A44",
+                        accent: "#10B981",
+                        "background-light": "#F4F7F5",
+                        "background-dark": "#05120E",
                         "surface-light": "#FFFFFF",
-                        "surface-dark": "#1F2937",
-                        "text-light": "#1F2937",
-                        "text-dark": "#F3F4F6",
+                        "surface-dark": "#081C15",
+                        "text-light": "#0E2F25",
+                        "text-dark": "#ECFDF5",
                     },
                     fontFamily: {
                         display: ["Inter", "sans-serif"],
                         body: ["Inter", "sans-serif"],
                         serif: ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
                     }
                 },
             },
@@ -53,207 +58,181 @@
             font-family: 'Playfair Display', serif;
         }
 
-        .prose h2 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .prose h3 {
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-
-        .prose p {
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .prose ol {
-            list-style-type: decimal;
-            padding-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .prose li {
-            margin-bottom: 0.5rem;
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
-    <app-navbar active-page="terms"></app-navbar>
+    <app-navbar active-page="resources"></app-navbar>
 
-    <main class="pt-32 pb-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">General Terms & Conditions</h1>
-                <p class="text-gray-500 dark:text-gray-400">Last updated: February 2026</p>
+    <main class="pt-32 pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumbs -->
+            <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-8">
+                <a href="resources.html" class="hover:text-primary dark:hover:text-secondary transition-colors">Resources</a>
+                <span class="material-icons text-xs">chevron_right</span>
+                <span class="text-gray-900 dark:text-white font-medium">Terms & Conditions</span>
             </div>
 
-            <div
-                class="bg-white dark:bg-surface-dark rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-gray-800 prose prose-slate dark:prose-invert max-w-none">
-                <p class="font-medium">These General Terms apply whenever FG Finance Limited (“FGF”) funds insurance
-                    premiums for the borrower:</p>
+            <!-- Page Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+                <!-- Sidebar Quick Navigation -->
+                <div class="hidden lg:block lg:col-span-1">
+                    <div class="sticky top-28 bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800/80 rounded-3xl p-6 shadow-sm">
+                        <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Terms Chapters</h4>
+                        <nav class="flex flex-col gap-3 text-sm">
+                            <a href="#definitions" class="text-primary dark:text-secondary font-semibold hover:text-secondary transition-colors">1. Definitions</a>
+                            <a href="#account" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">2. The FG Finance Account</a>
+                            <a href="#interest" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">3. Interest Rates</a>
+                            <a href="#statements" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">4. Statements of Account</a>
+                            <a href="#application" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">5. Payment Application</a>
+                            <a href="#payments" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">6. Scheduled Repayments</a>
+                            <a href="#warranties" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">7. Warranties & Indemnity</a>
+                            <a href="#default" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">8. Account Default</a>
+                            <a href="#charges" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">9. Default Charges</a>
+                            <a href="#privacy" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">10. Privacy Act 2020</a>
+                            <a href="#attorney" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">11. Power of Attorney</a>
+                            <a href="#law" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-secondary transition-colors">12. Applicable Law</a>
+                        </nav>
+                        <hr class="my-6 border-gray-100 dark:border-gray-800" />
+                        <a href="fees.html" class="inline-flex items-center justify-center w-full px-4 py-2 text-xs font-semibold rounded-full text-white bg-primary hover:bg-secondary transition-all">
+                            View Fee Schedule
+                        </a>
+                    </div>
+                </div>
 
-                <h2>1. Definitions</h2>
-                <ol>
-                    <li><strong>1.1</strong> The Borrower in this agreement is also referred to as "you" or "your". If
-                        there are two or more borrowers they are jointly and severally liable. The singular expression
-                        “Borrower” “you” and “your” includes all Borrowers and fewer than all Borrowers as the context
-                        may require.</li>
-                    <li><strong>1.2</strong> “Account balance” means the total debit amount of your account with the
-                        Lender, including principal, interest and charges “Business day” means any day which is not a
-                        Saturday nor Sunday nor a national public holiday.</li>
-                    <li><strong>1.3</strong> “Default” and “in default” means that you have done some thing you should
-                        not have done or failed to do some thing you should have done and you must remedy that act or
-                        omission.</li>
-                    <li><strong>1.4</strong> “Default Charges” are those set out in clause 9.</li>
-                    <li><strong>1.5</strong> “Default Interest” is charged at the annual interest rate plus 5%.</li>
-                    <li><strong>1.6</strong> “Financial default” means that your scheduled payment has been made late,
-                        reversed, dishonoured or not made or you have failed to repay your account balance when called
-                        upon.</li>
-                    <li><strong>1.7</strong> "Future Advance" and “collateral” have the meanings expressed in Section 16
-                        of the Personal Property Securities Act 1999 notwithstanding that that Act does not apply.</li>
-                    <li><strong>1.8</strong> “Insurer” means the insurance company issuing any relevant insurance
-                        Policy.</li>
-                    <li><strong>1.9</strong> "Interest" includes ordinary interest and Default Interest.</li>
-                    <li><strong>1.10</strong> “Intermediary” means any person arranging any insurance or loan under this
-                        agreement on behalf of the Borrower and includes a broker.</li>
-                    <li><strong>1.11</strong> "Policy” or “Policies" means the collateral insurance policies owned or to
-                        be owned by the Borrower for which FGF lends all or part of the premium to the Borrower.</li>
-                    <li><strong>1.12</strong> “Scheduled payment” means the amounts payable by you to FGF in the
-                        payments section of the Payment Plan on the dates shown.</li>
-                </ol>
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <div class="bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800/80 rounded-3xl p-8 md:p-12 shadow-sm">
+                        <div class="border-b border-gray-100 dark:border-gray-800/80 pb-8 mb-8">
+                            <span class="inline-block px-3 py-1 rounded-full bg-primary/10 dark:bg-secondary/15 text-primary dark:text-secondary text-xs font-bold uppercase tracking-wider mb-4">NZ Legal Agreement</span>
+                            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">General Terms & Conditions</h1>
+                            <p class="text-sm text-gray-500">Last updated: May 2026 | Version: GTC-NZ-2026-V3</p>
+                        </div>
 
-                <h2>2. The FG Finance Account</h2>
-                <ol>
-                    <li><strong>2.1</strong> We will open and maintain an insurance premium credit facility for you.
-                        This means we will lend you such money as you may need from time to time for premiums on
-                        insurance arranged through FG Insurance Services.</li>
-                    <li><strong>2.2</strong> We will not lend until we are satisfied as to the terms of issue of any
-                        insurance Policy.</li>
-                    <li><strong>2.3</strong> You authorise and request us from time to time to pay the insurance
-                        premiums on any Policy in such manner as may be required by the Insurer or the Intermediary or
-                        arranged by you until you notify us that you wish to cancel the insurance.</li>
-                    <li><strong>2.4</strong> FGF can make a call for the repayment in part or in full if the Insurer
-                        refuses to issue any Policy, or the Insurer cancels any Policy, or as outlined below. Until FGF
-                        makes such a call for a repayment you agree to make the scheduled payments.</li>
-                    <li><strong>2.5</strong> You must notify us or the Intermediary of any change to your address,
-                        telephone number and/or email address.</li>
-                    <li><strong>2.6</strong> You must maintain a bank account which provides direct debit and/or
-                        automatic payment facilities so as to enable the payments required under clause 6 to be made.
-                    </li>
-                </ol>
+                        <!-- Policy Text Content (adapted to NZ) -->
+                        <div class="prose prose-slate dark:prose-invert max-w-none space-y-8 text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                            <p class="font-medium text-gray-900 dark:text-white">
+                                These General Terms and Conditions apply whenever FG Finance Limited (“FGF”) funds insurance premiums or professional fees for the Borrower under a Premium Funding Credit Agreement.
+                            </p>
 
-                <h2>3. Interest</h2>
-                <p><strong>3.1</strong> We will charge ordinary interest on your account balance on a daily basis as set
-                    out in the Payment Plan.</p>
+                            <!-- section 1 -->
+                            <section id="definitions" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">1. Definitions</h3>
+                                <div class="space-y-3">
+                                    <p><strong>1.1</strong> The <strong>Borrower</strong> in this agreement is also referred to as "you" or "your". If there are two or more borrowers, they are jointly and severally liable. The singular expression “Borrower”, “you”, and “your” includes all Borrowers and fewer than all Borrowers as the context may require.</p>
+                                    <p><strong>1.2</strong> <strong>“Account balance”</strong> means the total debit amount of your account with the Lender (FGF), including principal, interest, and charges. <strong>“Business day”</strong> means any day which is not a Saturday, Sunday, or a national public holiday in New Zealand.</p>
+                                    <p><strong>1.3</strong> <strong>“Default”</strong> and <strong>“in default”</strong> means that you have done something you should not have done or failed to do something you should have done, and you must remedy that act or omission in accordance with this agreement.</p>
+                                    <p><strong>1.4</strong> <strong>“Default Charges”</strong> are those fees and administration costs set out in Clause 9 or our published Fee Schedule.</p>
+                                    <p><strong>1.5</strong> <strong>“Default Interest”</strong> is charged at the annual interest rate plus an additional 5% per annum, calculated daily on the overdue portion of the account balance.</p>
+                                    <p><strong>1.6</strong> <strong>“Financial default”</strong> means that your scheduled payment has been made late, reversed, dishonoured, or not made, or you have failed to repay your account balance when formally called upon.</p>
+                                    <p><strong>1.7</strong> <strong>“Future Advance”</strong> and <strong>“collateral”</strong> have the meanings expressed in Section 16 of the New Zealand <em>Personal Property Securities Act 1999</em>, notwithstanding that that Act does not apply.</p>
+                                    <p><strong>1.8</strong> <strong>“Insurer”</strong> means the insurance company issuing any relevant insurance Policy.</p>
+                                    <p><strong>1.9</strong> <strong>“Interest”</strong> includes ordinary interest and Default Interest.</p>
+                                    <p><strong>1.10</strong> <strong>“Intermediary”</strong> means any person arranging any insurance or loan under this agreement on behalf of the Borrower and includes an authorized insurance broker.</p>
+                                    <p><strong>1.11</strong> <strong>“Policy”</strong> or <strong>“Policies”</strong> means the collateral insurance policies owned or to be owned by the Borrower for which FGF lends all or part of the premium to the Borrower.</p>
+                                    <p><strong>1.12</strong> <strong>“Scheduled payment”</strong> means the monthly or periodic instalment amounts payable by you to FGF on the dates specified in the Payment Plan.</p>
+                                </div>
+                            </section>
 
-                <h2>4. FG Finance Statement of Account Balance</h2>
-                <p><strong>4.1</strong> We will (if this is a consumer credit contract) send you a statement showing
-                    your account in accordance with sections 18 to 21 of the Credit Contracts and Consumer Finance Act
-                    2003 and at such other times as we may decide or if you request a statement. Your account balance
-                    from time to time will be deemed to be the figure in your statement in the absence of proof to the
-                    contrary. You must at all times ensure that you know what your account balance is. For your own
-                    privacy we may refuse to advise you over the telephone but if you telephone we will write, or e-mail
-                    you to a previously provided contact with your account balance.</p>
+                            <!-- section 2 -->
+                            <section id="account" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">2. The FG Finance Account</h3>
+                                <div class="space-y-3">
+                                    <p><strong>2.1</strong> We will open and maintain an insurance premium credit facility for you. This means we will lend you such money as you may need from time to time for premiums on insurance policies arranged through your broker or intermediaries.</p>
+                                    <p><strong>2.2</strong> We will not release any funding until we are satisfied as to the terms, validity, and suitability of the underlying insurance Policy.</p>
+                                    <p><strong>2.3</strong> You authorize and request us from time to time to pay the insurance premiums on any Policy in such manner as may be required by the Insurer or the Intermediary, until you notify us in writing that you wish to cancel the insurance or repayment plan.</p>
+                                    <p><strong>2.4</strong> FGF can make a call for immediate repayment in part or in full if the Insurer refuses to issue any Policy, or the Insurer cancels any Policy, or if you enter default. Until FGF makes such a call for repayment, you agree to make all scheduled payments on their respective due dates.</p>
+                                    <p><strong>2.5</strong> You must notify us or your Intermediary immediately of any change to your address, telephone number, email address, or bank account details.</p>
+                                    <p><strong>2.6</strong> You must maintain a bank account which provides direct debit and/or automatic payment facilities so as to enable the periodic repayments required under Clause 6 to be made seamlessly.</p>
+                                </div>
+                            </section>
 
-                <h2>5. How your Payments are Applied</h2>
-                <ol>
-                    <li><strong>5.1</strong> We may appropriate any payment made by you in any manner that we decide in
-                        spite of the way that you may wish the payment to be appropriated. We may apply any payment to
-                        pay our Default Interest and/or Default Charges.</li>
-                    <li><strong>5.2</strong> If you fail to make your payments or to makeup any deficit when called
-                        upon, no matter how constituted, we may cancel all of or any of your insurance polices.</li>
-                </ol>
+                            <!-- section 3 -->
+                            <section id="interest" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">3. Interest</h3>
+                                <p><strong>3.1</strong> We will charge ordinary interest on your account balance on a daily basis at the fixed rate set out in your specific Premium Funding Payment Plan. This interest rate remains locked for the duration of the loan term, providing you with certain and predictable costs.</p>
+                            </section>
 
-                <h2>6. Payments</h2>
-                <ol>
-                    <li><strong>6.1</strong> You agree to pay us not less than the scheduled payment on or by the due
-                        date or dates in each month. You agree to provide us with and maintain a direct debit authority
-                        or an automatic payment authority as we request. If any due date is not a business day, payment
-                        may be made on the next business day. Any deposits or credits to your account will not be
-                        applied in reduction of the account balance until and unless they are honoured.</li>
-                    <li><strong>6.2</strong> If we accept any payment or bank any cheque made or forwarded by you in
-                        purported full settlement or in terms connoting accord and satisfaction we will not be deemed by
-                        such acceptance or banking to have accepted the terms upon which the payment is made or cheque
-                        forwarded unless we have, before the payment is made or cheque forwarded, agreed in writing to
-                        accept the amount in full settlement or otherwise as accord and satisfaction.</li>
-                </ol>
+                            <!-- section 4 -->
+                            <section id="statements" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">4. Statement of Account</h3>
+                                <p><strong>4.1</strong> If this agreement constitutes a consumer credit contract under New Zealand law, we will send you statements showing your account in accordance with Sections 18 to 21 of the <em>Credit Contracts and Consumer Finance Act 2003</em>, and at such other times as we may decide or if you request a statement. Your account balance from time to time will be deemed to be the figure in your statement in the absence of manifest error. You must ensure you are aware of your account balance. For privacy and security reasons, we will verify your identity before disclosing details, and may follow up via email to your registered address.</p>
+                            </section>
 
-                <h2>7. Borrower’s Warranties and Indemnities</h2>
-                <ol>
-                    <li><strong>7.1</strong> The Borrower warrants to FGF that all information given to FGF by the
-                        Borrower in connection with contract is complete and is not misleading and it has made and will
-                        continue to make, full and adequate disclosure to the Insurers of all facts relevant to the
-                        insurances and such insurances will be in full force and effect and not voidable.</li>
-                    <li><strong>7.2</strong> You authorise the Intermediary, immediately upon signing of this Agreement,
-                        to advise the Insurer of the assignment referred to the below and request that the Insurer
-                        acknowledge receipt of the notice of assignment in writing to the Lender.</li>
-                    <li><strong>7.3</strong> You promise to indemnify us against any default under this agreement and
-                        against anything we do at your request or on your behalf under this agreement.</li>
-                </ol>
+                            <!-- section 5 -->
+                            <section id="application" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">5. How your Payments are Applied</h3>
+                                <div class="space-y-3">
+                                    <p><strong>5.1</strong> We may appropriate any payment made by you in any manner that we decide in our absolute discretion, notwithstanding any direction you may provide. We will generally apply payments first to cover outstanding Default Interest, Default Charges, and then to reduce the principal loan amount.</p>
+                                    <p><strong>5.2</strong> If you fail to make your payments or to make up any deficit when called upon, we may proceed to request the cancellation of all or any of your funded insurance policies, and apply the returned pro-rata premium from the Insurer to reduce your account balance.</p>
+                                </div>
+                            </section>
 
-                <h2>8. Default</h2>
-                <ol>
-                    <li><strong>8.1</strong> If you are in default we may debit your account with Default Charges listed
-                        in clause 9.</li>
-                    <li><strong>8.2</strong> Further, we may debit your account with Default Interest if you are in
-                        financial default. We will also suspend the facility so that you cannot borrow any more money.
-                    </li>
-                    <li><strong>8.3</strong> If you fail to make a scheduled payment on due date your obligation to make
-                        that payment continues even if we may have debited your account with Default Charges and Default
-                        Interest. You agree to maintain enough in your bank account to enable us to debit your bank
-                        account for any amounts that may be necessary to pay all the Default Charges, Default Interest,
-                        and outstanding scheduled payments.</li>
-                    <li><strong>8.4</strong> We may call up the loan if you are in default. If you fail to pay on that
-                        demand, you must pay all existing and subsequent Default Charges to us as contractual damages.
-                        This means you are agreeing in advance that these are the damages you must pay if you do not pay
-                        your account balance when it is called up.</li>
-                </ol>
+                            <!-- section 6 -->
+                            <section id="payments" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">6. Payments</h3>
+                                <div class="space-y-3">
+                                    <p><strong>6.1</strong> You agree to pay us not less than the scheduled payment on or by the due date in each month. You agree to provide us with and maintain a direct debit authority or automatic payment authority. If any due date is not a business day, payment will be processed on the next business day. Any deposits or credits will not be credited until they are cleared and fully honoured by the paying bank.</p>
+                                    <p><strong>6.2</strong> If we accept any payment or bank any cheque made or forwarded by you in purported full settlement or in terms connoting accord and satisfaction, we will not be deemed by such acceptance to have accepted the terms unless we have, prior to receipt, explicitly agreed in writing to accept the amount in full settlement.</p>
+                                </div>
+                            </section>
 
-                <h2>9. Default Charges</h2>
-                <ol>
-                    <li><strong>9.1</strong> Default payment fee of $35.00, may be charged at our discretion, if any
-                        scheduled payment into your account from your bank is made after the date due, or is reversed,
-                        or is dishonoured, or is not made.</li>
-                    <li><strong>9.2</strong> Default time fee may be charged at our discretion if any staff member of
-                        ours spends time on the administration of your account when you are in default. “Administration”
-                        in this case includes all work in any way associated with our recovery of any overdue amounts or
-                        the account balance if called up. This may be charged at $60.00 per hour.</li>
-                    <li><strong>9.3</strong> In the case of enforcement, including the cancellation or realisation of
-                        the value of any insurance Policy, at any Court or Disputes Tribunal proceedings, we will charge
-                        to your account all Court and Tribunal costs and actual solicitors fees and disbursements and
-                        the costs and disbursements of values, auctioneers, process servers and any agents of FGF in
-                        effecting such enforcement plus any other necessary disbursements as those costs are
-                        ascertained.</li>
-                </ol>
+                            <!-- section 7 -->
+                            <section id="warranties" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">7. Borrower’s Warranties and Indemnities</h3>
+                                <div class="space-y-3">
+                                    <p><strong>7.1</strong> The Borrower warrants to FGF that all information given in connection with this contract is complete, true, and not misleading, and that the Borrower has made full and adequate disclosures of all relevant facts to the Insurer, and that such insurance policies are in full force and effect.</p>
+                                    <p><strong>7.2</strong> You authorize the Intermediary, immediately upon signing of this Agreement, to advise the Insurer of the assignment and power of attorney referred to in Clause 11, and request that the Insurer acknowledge receipt in writing to FGF.</p>
+                                    <p><strong>7.3</strong> You promise to indemnify FGF against any loss, cost, liability, or expense incurred in connection with any default under this agreement, or as a consequence of anything we do at your request or on your behalf.</p>
+                                </div>
+                            </section>
 
-                <h2>10. Privacy Act 2020</h2>
-                <p><strong>10.1</strong> The Borrower authorises FGF and its agents to collect, verify, exchange and
-                    disclose information (both now and in the future) about the Borrower from the Insurers, any
-                    reference bureau, credit reporting agency, financial institution or other credit provider, employee
-                    or landlord of the Borrower and any third party for the purpose of assisting FGF to carry out its
-                    usual business functions and activities, consider the Borrower's application for credit, comply with
-                    any obligations the Lender may have under anti-money laundering and countering financing of
-                    terrorism legislation and any other purpose in connection with the Insurances or these General
-                    Terms.</p>
+                            <!-- section 8 -->
+                            <section id="default" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">8. Default</h3>
+                                <div class="space-y-3">
+                                    <p><strong>8.1</strong> If you are in default, we may immediately debit your account with Default Charges as listed in Clause 9 and suspend your facility, preventing any future advances.</p>
+                                    <p><strong>8.2</strong> We will charge Default Interest on your account balance if you are in financial default, calculated daily from the due date until the default is fully remedied.</p>
+                                    <p><strong>8.3</strong> If you fail to make a scheduled payment, your obligation to pay continues even if we have debited your account with default fees. You agree to maintain sufficient funds in your bank account to enable us to clear all default fees, outstanding instalments, and default interest.</p>
+                                    <p><strong>8.4</strong> We may call up the entire loan facility immediately if you are in default. If you fail to pay on demand, you must pay all existing and subsequent enforcement costs as contractual damages.</p>
+                                </div>
+                            </section>
 
-                <h2>11. Specific Authority and Power of Attorney</h2>
-                <p><strong>11.1</strong> You authorise and request us to make the said payment directly to any
-                    Intermediary or to the Insurer when due. You irrevocably appoint FGF and any one director of FGF
-                    severally to be your attorney so that the attorney may do anything which you agree to do under this
-                    agreement. FGF may cancel or otherwise deal with the policies and may make, pursue and settle any
-                    claims in connection with any of the insurance policies and may receive and give receipts for the
-                    proceeds. This power shall last until your account balance has been paid in full.</p>
+                            <!-- section 9 -->
+                            <section id="charges" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">9. Default Charges</h3>
+                                <div class="space-y-3">
+                                    <p><strong>9.1</strong> <strong>Dishonour Fee:</strong> A fee of $30.00 NZD may be charged to your account if any scheduled direct debit payment is reversed, returned, or dishonoured by your bank.</p>
+                                    <p><strong>9.2</strong> <strong>Cancellation Fee:</strong> A fee of $100.00 NZD may be charged to your account in the event of default resulting in the formal cancellation of the loan facility and funded insurance policies.</p>
+                                    <p><strong>9.3</strong> <strong>Administration Fee:</strong> A default administration fee of $60.00 NZD per hour may be charged if our staff must spend time administering your default, including making calls, drafting notices, or managing recoveries.</p>
+                                    <p><strong>9.4</strong> <strong>Enforcement Costs:</strong> In the case of legal action or cancellation, you agree to pay all court and disputes tribunal costs, collection agency commissions, and actual solicitor fees incurred by FGF in enforcing this agreement.</p>
+                                </div>
+                            </section>
 
-                <h2>12. Law</h2>
-                <p><strong>12.1</strong> The law applicable to this agreement shall be the law of New Zealand.</p>
+                            <!-- section 10 -->
+                            <section id="privacy" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">10. Privacy Act 2020</h3>
+                                <p><strong>10.1</strong> The Borrower authorizes FGF and its agents to collect, verify, exchange, and disclose personal and credit-related information (both now and in the future) about the Borrower in accordance with the New Zealand <em>Privacy Act 2020</em> and our Privacy Policy. This includes sourcing details from Insurers, credit reporting bureaus (to check credit histories or report defaults), banks, and relevant third parties, for the purposes of evaluating creditworthiness, administering the loan, and complying with New Zealand AML/CFT legislation.</p>
+                            </section>
+
+                            <!-- section 11 -->
+                            <section id="attorney" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">11. Specific Authority and Power of Attorney</h3>
+                                <p><strong>11.1</strong> You authorize and request us to pay the premium directly to your broker or Insurer. You irrevocably appoint FGF and any director of FGF to be your attorney to do anything you agree to do under this agreement. Under this Power of Attorney, if you are in default, FGF may cancel the funded policies, claim any return premiums from the Insurer, settle claims, and give receipts for proceeds. This power remains in effect until your account balance is fully paid and discharged.</p>
+                            </section>
+
+                            <!-- section 12 -->
+                            <section id="law" class="scroll-mt-28 border-t border-gray-100 dark:border-gray-800/50 pt-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">12. Law</h3>
+                                <p><strong>12.1</strong> This agreement, its construction, and the rights of the parties are governed strictly by the laws of <strong>New Zealand</strong>. The parties submit to the non-exclusive jurisdiction of the New Zealand courts.</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

@@ -16,15 +16,15 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#009B77",
-                        secondary: "#1F4E3D",
-                        accent: "#8EC6A3",
-                        "background-light": "#F9FAFB",
-                        "background-dark": "#111827",
+                        primary: "#0A3C2D",
+                        secondary: "#9E7A44",
+                        accent: "#10B981",
+                        "background-light": "#F4F7F5",
+                        "background-dark": "#05120E",
                         "surface-light": "#FFFFFF",
-                        "surface-dark": "#1F2937",
-                        "text-light": "#1F2937",
-                        "text-dark": "#F3F4F6",
+                        "surface-dark": "#081C15",
+                        "text-light": "#0E2F25",
+                        "text-dark": "#ECFDF5",
                     },
                     fontFamily: {
                         display: ["Inter", "sans-serif"],
@@ -59,6 +59,36 @@
 
         html {
             scroll-behavior: smooth;
+        }
+
+        /* Custom range slider styling */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #9E7A44; /* Champagne Gold */
+            cursor: pointer;
+            border: 2px solid #FFFFFF;
+            box-shadow: 0 4px 6px -1px rgba(158, 122, 68, 0.4);
+            transition: transform 0.1s;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #9E7A44;
+            cursor: pointer;
+            border: 2px solid #FFFFFF;
+            box-shadow: 0 4px 6px -1px rgba(158, 122, 68, 0.4);
+            transition: transform 0.1s;
+        }
+        input[type="range"]::-moz-range-thumb:hover {
+            transform: scale(1.15);
         }
     </style>
 </head>
@@ -330,9 +360,8 @@
                 </div>
                 <div class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
                     <h4 class="text-lg font-bold mb-2">What are the typical loan terms?</h4>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">Repayment terms usually range from 6 to 10
-                        months, but we can offer up to 12 months depending on the policy type and business requirements.
-                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Repayment terms range from 6 to 10
+                        months, providing structured cash flow options to suit your business requirements.</p>
                 </div>
                 <div class="p-6 rounded-2xl border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
                     <h4 class="text-lg font-bold mb-2">Is the interest tax deductible?</h4>
@@ -345,6 +374,134 @@
                     <p class="text-gray-600 dark:text-gray-400 text-sm">Simply ask your insurance broker at FG Insurance
                         Services or your current provider to include an FG Finance monthly payment option with your
                         renewal quote.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repayment Calculator Section -->
+    <section class="py-24 bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800" id="calculator">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-4 block">Interactive Estimator</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 font-serif">Premium Funding Repayment Calculator</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Estimate your monthly payments instantly and see how premium funding keeps your cash flow flowing.
+                </p>
+            </div>
+            
+            <div class="bg-surface-light dark:bg-surface-dark rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800 p-8 md:p-12 relative overflow-hidden">
+                <!-- Background ambient glows -->
+                <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                    <!-- Calculator Inputs -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <!-- Premium Amount Slider -->
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <label for="premium-range" class="text-sm font-semibold tracking-wider uppercase text-gray-500 dark:text-gray-400">
+                                    Annual Premium Amount
+                                </label>
+                                <div class="flex items-center gap-1.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-1 font-mono text-lg font-bold text-primary dark:text-secondary">
+                                    <span class="text-xs text-gray-400">$</span>
+                                    <input type="number" id="premium-number" value="10000" min="1000" max="100000" step="500" class="w-20 bg-transparent border-0 p-0 text-right focus:ring-0 focus:outline-none text-primary dark:text-secondary font-bold text-lg" />
+                                    <span class="text-xs text-gray-400">NZD</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Premium Slider Track -->
+                            <div class="relative pt-2">
+                                <input type="range" id="premium-range" min="1000" max="100000" step="500" value="10000" 
+                                    class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-secondary" />
+                                <div class="flex justify-between text-xs text-gray-400 dark:text-gray-500 mt-2 font-mono">
+                                    <span>$1,000</span>
+                                    <span>$25,000</span>
+                                    <span>$50,000</span>
+                                    <span>$75,000</span>
+                                    <span>$100,000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Term Selection (Buttons) -->
+                        <div>
+                            <span class="block text-sm font-semibold tracking-wider uppercase text-gray-500 dark:text-gray-400 mb-4">
+                                Choose Funding Term
+                            </span>
+                            <div class="grid grid-cols-3 gap-3" id="term-buttons">
+                                <button type="button" data-term="6" class="term-btn py-3 px-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:border-secondary hover:text-secondary font-semibold text-center transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/50">
+                                    6 <span class="block text-[10px] font-normal uppercase text-gray-500 dark:text-gray-400 mt-0.5">Months</span>
+                                </button>
+                                <button type="button" data-term="8" class="term-btn py-3 px-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:border-secondary hover:text-secondary font-semibold text-center transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/50">
+                                    8 <span class="block text-[10px] font-normal uppercase text-gray-500 dark:text-gray-400 mt-0.5">Months</span>
+                                </button>
+                                <button type="button" data-term="10" class="term-btn py-3 px-4 rounded-xl border border-secondary bg-primary text-white font-semibold text-center transition-all duration-300 shadow-lg shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-secondary/50">
+                                    10 <span class="block text-[10px] font-normal uppercase text-white/70 mt-0.5">Months</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Key Disclosures -->
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800/40 rounded-2xl border border-gray-100 dark:border-gray-800 text-xs text-gray-500 dark:text-gray-400 space-y-2">
+                            <p class="flex items-center gap-2">
+                                <span class="material-icons text-primary dark:text-secondary text-sm">info</span>
+                                <span>Includes a transparent, one-off Application Fee of <strong>$45.00 NZD</strong>.</span>
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <span class="material-icons text-primary dark:text-secondary text-sm">percent</span>
+                                <span>Flat Interest Rates are tiered by term length: 6m (4.5%), 8m (5.5%), 10m (6.5%).</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Results Card -->
+                    <div class="lg:col-span-5 bg-gradient-to-br from-primary to-background-dark dark:from-surface-dark dark:to-background-dark text-white rounded-2xl p-8 border border-white/10 shadow-2xl relative overflow-hidden flex flex-col justify-between h-full min-h-[380px] group">
+                        <!-- Glass shine -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
+                        
+                        <div class="space-y-6 relative z-10">
+                            <div>
+                                <span class="text-xs font-bold tracking-widest uppercase text-white/50 block mb-1">Estimated Monthly Repayment</span>
+                                <div class="flex items-baseline gap-1">
+                                    <span class="text-2xl font-serif text-secondary">$</span>
+                                    <span class="text-5xl font-extrabold tracking-tight font-serif text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-secondary" id="monthly-repayment">1,069.50</span>
+                                    <span class="text-sm font-semibold text-white/50 ml-1">/ month</span>
+                                </div>
+                            </div>
+
+                            <hr class="border-white/10" />
+
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Interest Rate</span>
+                                    <span class="font-bold text-white block" id="result-rate">6.50% <span class="text-[10px] font-normal text-white/50">(Flat)</span></span>
+                                </div>
+                                <div>
+                                    <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Application Fee</span>
+                                    <span class="font-bold text-white block">$45.00 <span class="text-[10px] font-normal text-white/50">NZD</span></span>
+                                </div>
+                                <div>
+                                    <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Total Interest</span>
+                                    <span class="font-bold text-secondary block" id="result-interest">$650.00</span>
+                                </div>
+                                <div>
+                                    <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Total Cost of Funding</span>
+                                    <span class="font-bold text-white block" id="result-total">$10,695.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 relative z-10 space-y-4">
+                            <button type="button" id="apply-estimate-btn" class="w-full inline-flex items-center justify-center px-6 py-3.5 border border-transparent text-sm font-bold rounded-xl text-primary bg-secondary hover:bg-white hover:text-primary shadow-xl shadow-secondary/20 transition-all duration-300 transform hover:-translate-y-0.5">
+                                Apply with this Estimate
+                            </button>
+                            <p class="text-[10px] text-center text-white/40 leading-relaxed">
+                                *This is an estimate only. Actual rates and fees may vary based on credit assessment and are subject to terms and conditions.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -373,62 +530,98 @@
                         class="absolute bottom-0 right-0 -mb-16 -mr-16 w-64 h-64 bg-white/10 rounded-full blur-2xl z-0">
                     </div>
                 </div>
-                <div class="md:w-1/2 p-10 md:p-12">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Request a Quick Quote</h3>
-                    <form class="space-y-5">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                    for="first-name">First Name</label>
-                                <input
-                                    class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary text-sm py-2.5"
-                                    id="first-name" type="text" />
+                <div class="md:w-1/2 p-10 md:p-12 relative overflow-hidden" id="quote-card-container">
+                    <!-- Form Container -->
+                    <div id="quote-form-content" class="transition-all duration-500 transform scale-100 opacity-100">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6 font-serif">Request a Quick Quote</h3>
+                        
+                        <!-- Repayment Calculator Estimate Summary Card -->
+                        <div id="calculator-summary-card" class="hidden bg-gray-50 dark:bg-gray-800/60 p-4 rounded-xl border border-gray-100 dark:border-gray-700/60 flex items-center justify-between transition-all duration-300 mb-5">
+                            <div class="flex items-center gap-3">
+                                <span class="material-icons text-secondary text-2xl">calculate</span>
+                                <div>
+                                    <span class="text-[10px] text-gray-400 block font-semibold uppercase tracking-wider">Selected Estimate</span>
+                                    <span id="summary-text" class="text-sm font-bold text-gray-800 dark:text-white"></span>
+                                </div>
                             </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                    for="last-name">Last Name</label>
-                                <input
-                                    class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary text-sm py-2.5"
-                                    id="last-name" type="text" />
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                for="company">Company Name</label>
-                            <input
-                                class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary text-sm py-2.5"
-                                id="company" type="text" />
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                for="email">Email Address</label>
-                            <input
-                                class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary text-sm py-2.5"
-                                id="email" type="email" />
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                                for="funding-type">Funding Type</label>
-                            <select
-                                class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary text-sm py-2.5"
-                                id="funding-type">
-                                <option>Commercial Insurance</option>
-                                <option>Professional Fee</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div class="pt-2">
-                            <button
-                                class="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-3 px-4 rounded-lg shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-0.5"
-                                type="button">
-                                Get Your Quote
+                            <button type="button" id="clear-summary-btn" class="text-gray-400 hover:text-red-500 transition-colors flex items-center justify-center p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <span class="material-icons text-sm">close</span>
                             </button>
-                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-4 text-center">
-                                By submitting this form, you agree to our <a class="text-primary underline"
-                                    href="#">Privacy Policy</a>.
-                            </p>
                         </div>
-                    </form>
+
+                        <form class="space-y-5" id="quote-form">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                        for="first-name">First Name</label>
+                                    <input
+                                        class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary text-sm py-2.5"
+                                        id="first-name" name="first_name" type="text" required autocomplete="given-name" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                        for="last-name">Last Name</label>
+                                    <input
+                                        class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary text-sm py-2.5"
+                                        id="last-name" name="last_name" type="text" required autocomplete="family-name" />
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                    for="company">Company Name</label>
+                                <input
+                                    class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary text-sm py-2.5"
+                                    id="company" name="company" type="text" required autocomplete="organization" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                    for="email">Email Address</label>
+                                <input
+                                    class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary text-sm py-2.5"
+                                    id="email" name="email" type="email" required autocomplete="email" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                                    for="funding-type">Funding Type</label>
+                                <select
+                                    class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-primary focus:ring-primary text-sm py-2.5"
+                                    id="funding-type" name="funding_type" required>
+                                    <option value="Commercial Insurance">Commercial Insurance</option>
+                                    <option value="Professional Fee">Professional Fee</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="pt-2">
+                                <button
+                                    class="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-3 px-4 rounded-lg shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-0.5 flex items-center justify-center min-h-[48px]"
+                                    id="quote-submit-btn" type="submit">
+                                    Get Your Quote
+                                </button>
+                                <div class="flex items-start gap-2.5 mt-4 justify-center">
+                                    <input type="checkbox" id="agree-privacy" name="agree_privacy" required
+                                        class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600 dark:bg-gray-700 mt-0.5 cursor-pointer" />
+                                    <label for="agree-privacy" class="text-xs text-gray-500 dark:text-gray-400 cursor-pointer select-none">
+                                        By submitting this form, you agree to our <a class="text-primary dark:text-secondary underline hover:opacity-85 transition"
+                                            href="privacy.html" target="_blank">Privacy Policy</a>.
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Success State -->
+                    <div id="quote-success-state" class="hidden flex flex-col items-center justify-center text-center py-10 px-4 transition-all duration-500 transform scale-95 opacity-0">
+                        <div class="w-16 h-16 bg-emerald-100 dark:bg-emerald-950/40 rounded-full flex items-center justify-center mb-6 shadow-inner text-emerald-600 dark:text-emerald-400">
+                            <span class="material-icons text-4xl animate-bounce">check_circle</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3 font-serif">Quote Request Received!</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-8 leading-relaxed max-w-sm">
+                            Thank you for your request. Our Hamilton team will review your business details and get back to you within one business day.
+                        </p>
+                        <button type="button" id="reset-quote-btn" class="inline-flex items-center justify-center px-6 py-3 border border-gray-200 dark:border-gray-700 text-xs font-bold uppercase tracking-wider rounded-xl text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all shadow-sm">
+                            Request Another Quote
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -466,6 +659,305 @@
         } else {
             document.documentElement.classList.remove('dark');
         }
+
+        // Repayment Calculator Script
+        document.addEventListener('DOMContentLoaded', () => {
+            const premiumRange = document.getElementById('premium-range');
+            const premiumNumber = document.getElementById('premium-number');
+            const termButtons = document.querySelectorAll('.term-btn');
+            const monthlyRepayment = document.getElementById('monthly-repayment');
+            const resultRate = document.getElementById('result-rate');
+            const resultInterest = document.getElementById('result-interest');
+            const resultTotal = document.getElementById('result-total');
+            const applyEstimateBtn = document.getElementById('apply-estimate-btn');
+
+            let currentTerm = 10; // Default term
+            const applicationFee = 45; // NZD
+
+            // Flat interest rate maps
+            const rates = {
+                6: 0.045,
+                8: 0.055,
+                10: 0.065
+            };
+
+            function calculate() {
+                let premium = parseFloat(premiumRange.value);
+                if (isNaN(premium)) premium = 1000;
+                if (premium < 1000) premium = 1000;
+                if (premium > 100000) premium = 100000;
+
+                const rate = rates[currentTerm];
+                const interest = premium * rate;
+                const totalRepayment = premium + interest + applicationFee;
+                const monthly = totalRepayment / currentTerm;
+
+                // Format currency beautifully for NZD
+                const formatter = new Intl.NumberFormat('en-NZ', {
+                    style: 'decimal',
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
+
+                monthlyRepayment.innerText = formatter.format(monthly);
+                resultRate.innerHTML = `${(rate * 100).toFixed(2)}% <span class="text-[10px] font-normal text-white/50">(Flat)</span>`;
+                resultInterest.innerText = `$${formatter.format(interest)}`;
+                resultTotal.innerText = `$${formatter.format(totalRepayment)}`;
+            }
+
+            // Sync slider and input number
+            premiumRange.addEventListener('input', (e) => {
+                premiumNumber.value = e.target.value;
+                calculate();
+            });
+
+            premiumNumber.addEventListener('input', (e) => {
+                let val = parseFloat(e.target.value);
+                if (!isNaN(val)) {
+                    if (val > 100000) val = 100000;
+                    premiumRange.value = val;
+                    calculate();
+                }
+            });
+
+            premiumNumber.addEventListener('blur', (e) => {
+                let val = parseFloat(e.target.value);
+                if (isNaN(val) || val < 1000) val = 1000;
+                if (val > 100000) val = 100000;
+                // Round to nearest 500
+                val = Math.round(val / 500) * 500;
+                premiumNumber.value = val;
+                premiumRange.value = val;
+                calculate();
+            });
+
+            // Term selection buttons
+            termButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active classes from all
+                    termButtons.forEach(b => {
+                        b.className = "term-btn py-3 px-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:border-secondary hover:text-secondary font-semibold text-center transition-all duration-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary/50";
+                        const span = b.querySelector('span');
+                        if (span) span.className = "block text-[10px] font-normal uppercase text-gray-500 dark:text-gray-400 mt-0.5";
+                    });
+
+                    // Add active classes to clicked
+                    btn.className = "term-btn py-3 px-4 rounded-xl border border-secondary bg-primary text-white font-semibold text-center transition-all duration-300 shadow-lg shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-secondary/50";
+                    const span = btn.querySelector('span');
+                    if (span) span.className = "block text-[10px] font-normal uppercase text-white/70 mt-0.5";
+
+                    currentTerm = parseInt(btn.getAttribute('data-term'));
+                    calculate();
+                });
+            });
+
+            // Clear repayment calculator estimate summary card
+            const clearSummaryBtn = document.getElementById('clear-summary-btn');
+            const summaryCard = document.getElementById('calculator-summary-card');
+            
+            if (clearSummaryBtn && summaryCard) {
+                clearSummaryBtn.addEventListener('click', () => {
+                    summaryCard.classList.add('hidden');
+                    summaryCard.removeAttribute('data-premium');
+                    summaryCard.removeAttribute('data-term');
+                    summaryCard.removeAttribute('data-monthly');
+                    summaryCard.removeAttribute('data-total');
+                });
+            }
+
+            // Connect button to form
+            if (applyEstimateBtn) {
+                applyEstimateBtn.addEventListener('click', () => {
+                    const quoteSection = document.getElementById('quote');
+                    if (quoteSection) {
+                        // Gather details from calculator
+                        const premium = parseFloat(premiumRange.value);
+                        const term = currentTerm;
+                        const rate = rates[currentTerm];
+                        const interest = premium * rate;
+                        const total = premium + interest + applicationFee;
+                        const monthly = total / currentTerm;
+
+                        // Display the estimate summary card
+                        const summaryText = document.getElementById('summary-text');
+                        if (summaryCard && summaryText) {
+                            const formatter = new Intl.NumberFormat('en-NZ', {
+                                style: 'currency',
+                                currency: 'NZD'
+                            });
+                            
+                            summaryText.innerText = `${formatter.format(premium)} NZD over ${term} months (${formatter.format(monthly)}/mo)`;
+                            summaryCard.classList.remove('hidden');
+
+                            // Store these values as data attributes for form collection
+                            summaryCard.dataset.premium = premium;
+                            summaryCard.dataset.term = term;
+                            summaryCard.dataset.monthly = monthly.toFixed(2);
+                            summaryCard.dataset.total = total.toFixed(2);
+                        }
+
+                        // Sync funding type
+                        const fundingTypeSelect = document.getElementById('funding-type');
+                        if (fundingTypeSelect) {
+                            fundingTypeSelect.value = "Commercial Insurance";
+                        }
+
+                        quoteSection.scrollIntoView({ behavior: 'smooth' });
+                        
+                        // Focus on first name input
+                        const firstNameInput = document.getElementById('first-name');
+                        if (firstNameInput) {
+                            setTimeout(() => {
+                                firstNameInput.focus();
+                            }, 500);
+                        }
+                    }
+                });
+            }
+
+            // operationalize the Quote Form submission
+            const quoteForm = document.getElementById('quote-form');
+            const quoteFormContent = document.getElementById('quote-form-content');
+            const quoteSuccessState = document.getElementById('quote-success-state');
+            const resetQuoteBtn = document.getElementById('reset-quote-btn');
+            const submitBtn = document.getElementById('quote-submit-btn');
+
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const firstName = document.getElementById('first-name').value.trim();
+                    const lastName = document.getElementById('last-name').value.trim();
+                    const company = document.getElementById('company').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const fundingType = document.getElementById('funding-type').value;
+                    const agreePrivacy = document.getElementById('agree-privacy').checked;
+
+                    if (!firstName || !lastName || !email || !company) {
+                        return; // Native validation handles this
+                    }
+                    if (!agreePrivacy) {
+                        alert('You must agree to the Privacy Policy to request a quote.');
+                        return;
+                    }
+
+                    // Retrieve calculator details if available
+                    let estimateDetails = '';
+                    if (summaryCard && !summaryCard.classList.contains('hidden')) {
+                        const premium = summaryCard.dataset.premium;
+                        const term = summaryCard.dataset.term;
+                        const monthly = summaryCard.dataset.monthly;
+                        const total = summaryCard.dataset.total;
+                        estimateDetails = `\n\n--- Repayment Estimate Details ---\nPremium Amount: $${premium} NZD\nRepayment Term: ${term} Months\nEstimated Monthly Repayment: $${monthly} NZD\nTotal Funding Cost: $${total} NZD`;
+                    }
+
+                    // Disable submit button and add loading spinner
+                    const originalBtnContent = submitBtn.innerHTML;
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = `
+                        <span class="inline-flex items-center gap-2">
+                            <svg class="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            Submitting Request...
+                        </span>
+                    `;
+
+                    // Define public form endpoint parameter (e.g. Web3Forms Key)
+                    // If no key is set, falls back beautifully to mock success and mailto backup
+                    const WEB3FORMS_ACCESS_KEY = 'a0029873-57a5-47d1-a2ce-452cfba66480'; 
+
+                    const subject = `New Quote Request - ${company} (${firstName} ${lastName})`;
+                    const messageBody = `First Name: ${firstName}\nLast Name: ${lastName}\nCompany: ${company}\nEmail: ${email}\nFunding Type: ${fundingType}${estimateDetails}`;
+
+                    const triggerSuccess = () => {
+                        quoteFormContent.classList.add('transition-all', 'duration-500', 'transform', 'scale-95', 'opacity-0');
+                        setTimeout(() => {
+                            quoteFormContent.classList.add('hidden');
+                            quoteSuccessState.classList.remove('hidden');
+                            setTimeout(() => {
+                                quoteSuccessState.classList.remove('scale-95', 'opacity-0');
+                                quoteSuccessState.classList.add('scale-100', 'opacity-100');
+                            }, 50);
+                        }, 500);
+                    };
+
+                    if (WEB3FORMS_ACCESS_KEY) {
+                        fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                access_key: WEB3FORMS_ACCESS_KEY,
+                                name: `${firstName} ${lastName}`,
+                                email: email,
+                                subject: subject,
+                                message: messageBody,
+                                from_name: 'FG Finance Quote Form'
+                            })
+                        })
+                        .then(response => response.json())
+                        .then(resData => {
+                            if (resData.success) {
+                                triggerSuccess();
+                            } else {
+                                throw new Error('API submission rejected');
+                            }
+                        })
+                        .catch(err => {
+                            console.warn('API submission failed, falling back to mailto', err);
+                            const mailtoUrl = `mailto:admin@fgfinance.co.nz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(messageBody)}`;
+                            window.location.href = mailtoUrl;
+                            triggerSuccess();
+                        })
+                        .finally(() => {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalBtnContent;
+                        });
+                    } else {
+                        // Simulated client-side submission effect
+                        setTimeout(() => {
+                            const mailtoUrl = `mailto:admin@fgfinance.co.nz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(messageBody)}`;
+                            window.location.href = mailtoUrl;
+                            
+                            triggerSuccess();
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalBtnContent;
+                        }, 1200);
+                    }
+                });
+            }
+
+            // Reset/Submit another quote
+            if (resetQuoteBtn) {
+                resetQuoteBtn.addEventListener('click', () => {
+                    quoteForm.reset();
+                    if (summaryCard) {
+                        summaryCard.classList.add('hidden');
+                        summaryCard.removeAttribute('data-premium');
+                        summaryCard.removeAttribute('data-term');
+                        summaryCard.removeAttribute('data-monthly');
+                        summaryCard.removeAttribute('data-total');
+                    }
+                    
+                    quoteSuccessState.classList.add('transition-all', 'duration-500', 'transform', 'scale-95', 'opacity-0');
+                    setTimeout(() => {
+                        quoteSuccessState.classList.add('hidden');
+                        quoteFormContent.classList.remove('hidden');
+                        setTimeout(() => {
+                            quoteFormContent.classList.remove('scale-95', 'opacity-0');
+                            quoteFormContent.classList.add('scale-100', 'opacity-100');
+                        }, 50);
+                    }, 500);
+                });
+            }
+
+            // Run initial calculation
+            calculate();
+        });
     </script>
 </body>
 
