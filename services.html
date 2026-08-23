@@ -375,7 +375,7 @@
     </section>
 
     <!-- Repayment Calculator Section -->
-    <section class="py-24 bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800" id="calculator">
+    <section class="py-24 bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 scroll-mt-20" id="calculator">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-4 block">Interactive Estimator</span>
@@ -385,7 +385,7 @@
                 </p>
             </div>
             
-            <div class="bg-surface-light dark:bg-surface-dark rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800 p-8 md:p-12 relative overflow-hidden">
+            <div class="bg-surface-light dark:bg-surface-dark rounded-3xl shadow-xl border border-gray-100 dark:border-gray-800 p-8 md:p-12 relative overflow-hidden" id="repayment-calculator">
                 <!-- Background ambient glows -->
                 <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
                 <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
@@ -401,14 +401,14 @@
                                 </label>
                                 <div class="flex items-center gap-1.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-3 py-1 font-mono text-lg font-bold text-primary dark:text-secondary">
                                     <span class="text-xs text-gray-400">$</span>
-                                    <input type="number" id="premium-number" value="10000" min="1000" max="100000" step="500" class="w-20 bg-transparent border-0 p-0 text-right focus:ring-0 focus:outline-none text-primary dark:text-secondary font-bold text-lg" />
+                                    <input type="number" id="premium-number" value="10000" min="1000" max="100000" step="1" class="w-24 bg-transparent border-0 p-0 text-right focus:ring-0 focus:outline-none text-primary dark:text-secondary font-bold text-lg" />
                                     <span class="text-xs text-gray-400">NZD</span>
                                 </div>
                             </div>
                             
                             <!-- Premium Slider Track -->
                             <div class="relative pt-2">
-                                <input type="range" id="premium-range" min="1000" max="100000" step="500" value="10000" 
+                                <input type="range" id="premium-range" min="1000" max="100000" step="1" value="10000" 
                                     class="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-secondary" />
                                 <div class="flex justify-between text-xs text-gray-400 dark:text-gray-500 mt-2 font-mono">
                                     <span>$1,000</span>
@@ -445,11 +445,11 @@
                         <div class="p-4 bg-gray-50 dark:bg-gray-800/40 rounded-2xl border border-gray-100 dark:border-gray-800 text-xs text-gray-500 dark:text-gray-400 space-y-2">
                             <p class="flex items-center gap-2">
                                 <span class="material-icons text-primary dark:text-secondary text-sm">info</span>
-                                <span>Includes a transparent, one-off Application Fee of <strong>$45.00 NZD</strong>.</span>
+                                <span>Includes a transparent, one-off Application Fee of <strong>$20.00 NZD</strong>.</span>
                             </p>
                             <p class="flex items-center gap-2">
                                 <span class="material-icons text-primary dark:text-secondary text-sm">percent</span>
-                                <span>Flat Interest Rates are tiered by term length: 6m (4.5%), 8m (5.5%), 10m (6.5%), 12m (7.5%).</span>
+                                <span>Flat Interest Rate is fixed at <strong>6.75%</strong> across all funding terms.</span>
                             </p>
                         </div>
                     </div>
@@ -474,15 +474,15 @@
                             <div class="grid grid-cols-2 gap-4 text-sm">
                                 <div>
                                     <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Interest Rate</span>
-                                    <span class="font-bold text-white block" id="result-rate">6.50% <span class="text-[10px] font-normal text-white/50">(Flat)</span></span>
+                                    <span class="font-bold text-white block" id="result-rate">6.75% <span class="text-[10px] font-normal text-white/50">(Flat)</span></span>
                                 </div>
                                 <div>
                                     <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Application Fee</span>
-                                    <span class="font-bold text-white block">$45.00 <span class="text-[10px] font-normal text-white/50">NZD</span></span>
+                                    <span class="font-bold text-white block">$20.00 <span class="text-[10px] font-normal text-white/50">NZD</span></span>
                                 </div>
                                 <div>
                                     <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Total Interest</span>
-                                    <span class="font-bold text-secondary block" id="result-interest">$650.00</span>
+                                    <span class="font-bold text-secondary block" id="result-interest">$675.00</span>
                                 </div>
                                 <div>
                                     <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Total Cost of Funding</span>
@@ -651,19 +651,19 @@
             const applyEstimateBtn = document.getElementById('apply-estimate-btn');
 
             let currentTerm = 10; // Default term
-            const applicationFee = 45; // NZD
+            const applicationFee = 20; // NZD
 
-            // Flat interest rate maps
+            // Flat interest rate maps (6.75% across all tenures)
             const rates = {
-                6: 0.045,
-                8: 0.055,
-                10: 0.065,
-                12: 0.075
+                6: 0.0675,
+                8: 0.0675,
+                10: 0.0675,
+                12: 0.0675
             };
 
             function calculate() {
-                let premium = parseFloat(premiumRange.value);
-                if (isNaN(premium)) premium = 1000;
+                let premium = parseFloat(premiumNumber.value);
+                if (isNaN(premium)) premium = parseFloat(premiumRange.value) || 1000;
                 if (premium < 1000) premium = 1000;
                 if (premium > 100000) premium = 100000;
 
@@ -704,8 +704,6 @@
                 let val = parseFloat(e.target.value);
                 if (isNaN(val) || val < 1000) val = 1000;
                 if (val > 100000) val = 100000;
-                // Round to nearest 500
-                val = Math.round(val / 500) * 500;
                 premiumNumber.value = val;
                 premiumRange.value = val;
                 calculate();
