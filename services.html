@@ -449,7 +449,7 @@
                             </p>
                             <p class="flex items-center gap-2">
                                 <span class="material-icons text-primary dark:text-secondary text-sm">percent</span>
-                                <span>Flat Interest Rate is fixed at <strong>6.75%</strong> across all funding terms.</span>
+                                <span>Flat Interest Rate of <strong>6.75% p.a.</strong>, charged pro-rata over your funding term.</span>
                             </p>
                         </div>
                     </div>
@@ -464,7 +464,7 @@
                                 <span class="text-xs font-bold tracking-widest uppercase text-white/50 block mb-1">Estimated Monthly Repayment</span>
                                 <div class="flex items-baseline gap-1">
                                     <span class="text-2xl font-serif text-secondary">$</span>
-                                    <span class="text-5xl font-extrabold tracking-tight font-serif text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-secondary" id="monthly-repayment">1,069.50</span>
+                                    <span class="text-5xl font-extrabold tracking-tight font-serif text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-secondary" id="monthly-repayment">1,058.25</span>
                                     <span class="text-sm font-semibold text-white/50 ml-1">/ month</span>
                                 </div>
                             </div>
@@ -474,7 +474,7 @@
                             <div class="grid grid-cols-2 gap-4 text-sm">
                                 <div>
                                     <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Interest Rate</span>
-                                    <span class="font-bold text-white block" id="result-rate">6.75% <span class="text-[10px] font-normal text-white/50">(Flat)</span></span>
+                                    <span class="font-bold text-white block" id="result-rate">6.75% p.a. <span class="text-[10px] font-normal text-white/50">(Flat)</span></span>
                                 </div>
                                 <div>
                                     <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Application Fee</span>
@@ -482,11 +482,11 @@
                                 </div>
                                 <div>
                                     <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Total Interest</span>
-                                    <span class="font-bold text-secondary block" id="result-interest">$675.00</span>
+                                    <span class="font-bold text-secondary block" id="result-interest">$562.50</span>
                                 </div>
                                 <div>
                                     <span class="text-white/40 block text-xs uppercase tracking-wider mb-1">Total Cost of Funding</span>
-                                    <span class="font-bold text-white block" id="result-total">$10,695.00</span>
+                                    <span class="font-bold text-white block" id="result-total">$10,582.50</span>
                                 </div>
                             </div>
                         </div>
@@ -653,7 +653,7 @@
             let currentTerm = 10; // Default term
             const applicationFee = 20; // NZD
 
-            // Flat interest rate maps (6.75% across all tenures)
+            // Flat interest rate maps (6.75% p.a., pro-rated by funding term)
             const rates = {
                 6: 0.0675,
                 8: 0.0675,
@@ -668,7 +668,7 @@
                 if (premium > 100000) premium = 100000;
 
                 const rate = rates[currentTerm];
-                const interest = premium * rate;
+                const interest = premium * rate * (currentTerm / 12);
                 const totalRepayment = premium + interest + applicationFee;
                 const monthly = totalRepayment / currentTerm;
 
@@ -680,7 +680,7 @@
                 });
 
                 monthlyRepayment.innerText = formatter.format(monthly);
-                resultRate.innerHTML = `${(rate * 100).toFixed(2)}% <span class="text-[10px] font-normal text-white/50">(Flat)</span>`;
+                resultRate.innerHTML = `${(rate * 100).toFixed(2)}% p.a. <span class="text-[10px] font-normal text-white/50">(Flat)</span>`;
                 resultInterest.innerText = `$${formatter.format(interest)}`;
                 resultTotal.innerText = `$${formatter.format(totalRepayment)}`;
             }
@@ -752,7 +752,7 @@
                         const premium = parseFloat(premiumRange.value);
                         const term = currentTerm;
                         const rate = rates[currentTerm];
-                        const interest = premium * rate;
+                        const interest = premium * rate * (currentTerm / 12);
                         const total = premium + interest + applicationFee;
                         const monthly = total / currentTerm;
 
